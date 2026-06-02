@@ -79,19 +79,6 @@ model DriverApplication {
   signatureData        String   @db.Text // Base64 image data URL
   signedAt             DateTime @default(now())
   
-  // Equipment / Truck Details (Made optional)
-  truckYear            String?
-  truckMake            String?
-  truckVin             String?
-  truckPlate           String?
-  truckPlateState      String?
-  trailerType          String?  // Dry Van, Flatbed, Reefer, etc.
-  
-  // Direct Deposit Details (Made optional)
-  bankName             String?
-  bankRouting          String?
-  bankAccount          String?
-  
   // Status tracking for Admin Panel
   status               String   @default("PENDING") // PENDING, REVIEWED, APPROVED, REJECTED
 }
